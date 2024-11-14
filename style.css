@@ -1,15 +1,20 @@
-*{
-    margin: 0;
-    padding: 0;
+
+html {
     box-sizing: border-box;
-    /* border: 1px solid red ; */
+    font-size: 62.5%;
 }
+
+*, *::before, *::after {
+    box-sizing: inherit;
+    /* border: 1px solid red ; */
+  }
 
 body{
     background-color: #1e1e1e;
     display: flex;
     justify-content: center;
-    color: antiquewhite;
+    color: white;
+    font-size: 1.2rem;
 }
 
 main{
@@ -18,36 +23,56 @@ main{
     flex-direction: column;
 }
 
-main .intro{
+.intro{
     width: 100%;
     display: flex;
     justify-content: space-between;
     margin-top: 40px;
+    height: fit-content;
 
 }
 
 /* intro section  */
 
-.intro .about, .intro .links{
+.about, .links{
     flex: 1;
     display: flex;
     gap: 20px;
 }
-
-.intro .links{
+.links{
     justify-content: end;
 }
 
-.intro .about img{
+.desc{
+    display: flex;
+    flex-direction: column;
+}
+
+#name{
+    margin: 8px 0 8px 0;
+    font-size: 2.4rem;
+}
+#profession{
+    margin: 0 0 4px 0;
+    font-size: 1.6rem;
+}
+
+.about img{
     height: 150px;
     width: 150px;
     border-radius: 8px;
 }
 
-.about .desc img{
-    height: 40px;
-    width: 40px;
+.desc img{
+    height: 20px;
+    width: 20px;
     display: inline-block;
+    margin-top: auto;
+}
+
+.desc p{
+    margin-bottom: 8px;
+    font-size: 1.2rem;
 }
 
 .links img{
@@ -61,6 +86,7 @@ main .intro{
 
 .head-title{
     margin: 30px 0 30px 0;
+    font-size: 1.6rem;
 }
 
 .techs{
@@ -75,17 +101,47 @@ main .intro{
 }
 
 
-.tech-container .tech{
+.tech{
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 8px;
 }
 
-.techs .tech img{
+.tech img{
     height: 100px;
     width: 100px;
 
 }
 
 /* project section  */
+
+.projects{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.project-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-content: center;
+}
+
+.card{
+    width: 300px;
+    height: 250px;
+    border: 1px solid red;
+    border-radius: 8px;
+    margin: 8px auto;
+}
+
+.card img{
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+    border-radius: 8px;
+    display: inline;
+}
+
